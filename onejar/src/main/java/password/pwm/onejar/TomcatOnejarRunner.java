@@ -156,10 +156,10 @@ public class TomcatOnejarRunner
         {
             connector.setProperty( "address", onejarConfig.getLocalAddress() );
         }
-        connector.setSecure( true );
-        connector.setScheme( "https" );
+        connector.setSecure( false );
+        connector.setScheme( "http" );
         connector.addUpgradeProtocol( new Http2Protocol() );
-        connector.setAttribute( "SSLEnabled", "true" );
+        connector.setAttribute( "SSLEnabled", "false" );
         connector.setAttribute( "keystoreFile", onejarConfig.getKeystoreFile().getAbsolutePath() );
         connector.setAttribute( "keystorePass", onejarConfig.getKeystorePass() );
         connector.setAttribute( "keyAlias", OnejarMain.KEYSTORE_ALIAS );

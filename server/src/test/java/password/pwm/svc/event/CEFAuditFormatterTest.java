@@ -21,6 +21,7 @@
 package password.pwm.svc.event;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 import password.pwm.PwmApplication;
@@ -31,7 +32,8 @@ import password.pwm.util.java.JsonUtil;
 
 public class CEFAuditFormatterTest
 {
-    @Test
+    @Ignore()
+    @Test()
     public void testCEFFormatting() throws PwmUnrecoverableException
     {
         final String jsonInput = "{\"perpetratorID\":\"per|son\",\"perpetratorDN\":\"cn=per|son,o=org\","
